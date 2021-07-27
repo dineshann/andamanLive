@@ -1,0 +1,29 @@
+/* Andaman.Live */
+/* 27072020 */
+// https://xd.adobe.com/view/69642846-a5d1-4a37-9de3-9a20e540f965-3c37/
+
+/* Code by Dinesh */
+// Landing Page SASS to CSS
+// Bootstrap Included inside the SASS folder and Customized
+
+// File Path cd assets
+// Compile Path | sass --watch sass/style.scss:css/style.css
+
+
+// Bootstrap-override
+@import 'base/variables';
+
+// Bootstrap
+@import "bootstrap-scss/bootstrap.scss";
+
+// Base
+@import "base/mixins";
+@import "base/general";
+@import "base/typography";
+
+// Layout
+@import "layout/loader";
+@import "layout/topNav";
+@import "layout/body";
+@import "layout/footer";
+

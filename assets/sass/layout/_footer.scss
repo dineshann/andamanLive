@@ -1,0 +1,23 @@
+//    footer section
+.footer{
+    position: relative;
+    .footer__item{
+       //  background-color: pink;
+       word-spacing: 2rem;
+       margin-left: 3rem;
+       font-size: 20px;
+       font-weight: 500;
+    }   
+    .form-inline{
+        margin-right: 9rem;
+        span{
+            background-color: skyblue;
+        }
+    }       
+}
+.footer__text{
+      span{
+       color: #343a40;
+       margin-left: 1rem;
+      }
+}
