@@ -49,6 +49,11 @@
                 a {
                     margin: 0 0.4rem;
                     @include border-radius($border12);
+                    padding: 0.25rem 1.2rem;
+
+                    i {
+                        margin-right: 0.2rem;
+                    }
                     &.btn-c {
                         display: block;
                         padding: 0.15rem 1rem;
