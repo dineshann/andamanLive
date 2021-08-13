@@ -8,6 +8,10 @@
   transition: $transition;
 }
 
+@mixin border-radius($val) {
+  border-radius: $val $val 0px $val;
+}
+
 @mixin center() {
   align-items: center;
   justify-content: center;
@@ -32,7 +36,7 @@
 
 // Clone Text
 @mixin clone-text {
-  background: linear-gradient(90deg, $cb, $cp);
+  background: linear-gradient(90deg, $cr, $cb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;

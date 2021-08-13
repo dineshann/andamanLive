@@ -1,23 +1,51 @@
 //    footer section
 .footer{
     position: relative;
+    box-shadow: 0px -4px 30px -25px rgb(0 0 0 / 90%);
+
     .footer__item{
-       //  background-color: pink;
-       word-spacing: 2rem;
-       margin-left: 3rem;
-       font-size: 20px;
-       font-weight: 500;
+        word-spacing: 2rem;
+        font-size: 20px;
+        font-weight: 500;
     }   
     .form-inline{
-        margin-right: 9rem;
-        span{
-            background-color: skyblue;
+        // margin-right: 9rem;
+        input {
+            &.form-control {
+                outline: none;
+                box-shadow: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        a {
+            color: $cwhite;
+            background-color: $cr;
+            @include transition($all);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            &:hover {
+                background-color: darken($cr, 10);
+            }
         }
     }       
 }
 .footer__text{
-      span{
-       color: #343a40;
-       margin-left: 1rem;
-      }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    img {
+        height: 40px;
+    }
+
+    span{
+        color: $cdark;
+
+        a {
+           color: $cdark;
+           font-weight: 600;
+        }
+    }
 }
