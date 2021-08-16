@@ -7,6 +7,16 @@
         word-spacing: 2rem;
         font-size: 20px;
         font-weight: 500;
+
+        a {
+            font-weight: 500;
+            color: $cdark;
+            @include transition($all);
+
+            &:hover {
+                color: $cr;
+            }
+        }
     }   
     .form-inline{
         // margin-right: 9rem;

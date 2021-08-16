@@ -83,10 +83,11 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
             margin-top: 4rem;
+            padding: 2rem 2rem 0rem 2rem;
 
             &__sec {
                 position: relative;
@@ -105,6 +106,8 @@
                         @include border-radius(1.5rem);
                         position: relative;
                         margin-bottom: 0;
+                        width: 100%;
+                        height: 40vh;
                     }
 
                     a {                        
@@ -141,16 +144,25 @@
 
                     .live {
                         position: absolute;
-                        bottom: 0.5rem;
-                        right: 0.5rem;
-                        font-size: 1rem;
+                        bottom: 0.1rem;
+                        right: 1rem;
+                        font-size: 0.8rem;
+                        letter-spacing: 2px;
                         color: $cwhite;
+                        text-transform: uppercase;
 
                         span {
                             color: $cr;
                             font-size: 2rem;
+                            line-height: 2rem;
                         }
                     }
+                }
+
+                .title {
+                    text-align: center;
+                    font-size: 1rem;
+                    color: $cr;
                 }
             }
         }
@@ -283,12 +295,13 @@
 
         // Info Section
         .infoSec {
-            padding: 2rem 2rem 1rem;
-            margin: 2rem auto;
+            padding: 2rem;
+            margin: 1rem auto;
 
             &__heading {
-                font-size: 2.4rem;
-                margin-bottom: 2rem;
+                display: block;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
                 font-weight: 600;
                 @include clone-text;
             }
@@ -323,6 +336,7 @@
         // Recent Event Broadcast
         .recentEvent {
             @extend .infoSec;
+            padding-bottom: 2rem;
             background-color: $bg-light;
             
             
@@ -332,12 +346,13 @@
 
             &__sec {
                 position: relative;
-                padding: 0 2rem;
+                padding: 0 1rem;
 
                 .videoArea {
                     position: relative;
 
                     img {
+                        width: 100%;
                         @include border-radius(1.5rem);
                         object-fit: contain;
                         position: relative;
@@ -378,11 +393,198 @@
                 }
 
                 .contentArea {
-                    padding: 1rem;
+                    padding: 1rem 1rem 0;
                     
                     h4 {
                         font-size: 1.4rem;
                         font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        // Social Media
+        .socialMedia {
+            @extend .infoSec;            
+            
+            &__heading {
+                @extend .infoSec__heading;
+            }
+
+            &__list {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                
+                a {
+                    font-size: 2rem;
+                    padding: 0.5rem 1rem;
+                    color: rgba($cdark, 0.7);
+                    margin: 0rem 0.25rem;
+                    @include transition($all);
+                    border: 1px solid transparent;
+                    @include border-radius($border12);
+
+                    &:hover {
+                        color: $cr;
+                        border-color: $cr;
+                    }
+                }
+            }
+        }
+
+        // Live Page
+        .liveStrm {
+            width: 100%;
+            min-height: 100vh;
+            z-index: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // margin-top: 4rem;
+
+            &__iframe {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                height: 95vh;
+                margin-top: 5vh;
+
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        // News Page
+        .news {
+            position: relative;
+            padding: 5rem 2rem 2rem;
+            min-height: 100vh;
+        
+            &__heading {
+                @extend .infoSec__heading;
+            }
+
+            .recentEvent {
+                &__sec {
+                    padding: 1rem;
+                    border: 1px solid #efefef;
+                    @include border-radius(2rem);
+                    @include transition($all);
+
+                    &:hover {
+                        border-color: $cr;
+                    }
+                }
+            }
+        }
+
+        // Captured Page
+        .captured {
+            position: relative;
+            display: revert;
+            padding: 5rem 2rem 2rem;
+            width: 100%;
+            min-height: 100vh;
+            // padding-bottom: 2rem;
+            // width: 95%;
+            // margin: 0 auto;
+
+            &__heading {
+                @extend .infoSec__heading;
+            }
+
+            // .events {
+            //     width: 100%;
+            // }
+        
+            &__list {
+                padding-top: 0.5rem;
+                margin: 0.25rem;
+                @include border-radius($border8);
+                border: 1px solid $cr;
+                transition: all 0.5s ease-in-out;
+        
+                &:hover {
+                    background-color: rgba($clight, 0.5);
+                }
+
+                h5.text-primary {
+                    color: $cr !important;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+        
+                a {
+                    text-align: center;
+                    display: block;
+                }
+            }
+        
+            .owl-carousel {
+                .owl-nav {
+                    position: absolute;
+                    width: 100%;
+                    top: 5px;
+                    left: 0px; 
+        
+                    .owl-prev {
+                        position: absolute;
+                        left: -36px;
+                    }
+        
+                    .owl-next {
+                        position: absolute;
+                        right: -36px;
+                    }
+                }
+            }
+
+            .navs-carousel{
+                .owl-nav{
+                    margin-top: 16px;
+                    button{
+                        width: 28px;
+                        height: 30px;
+                        line-height: 28px !important;
+                        font-size: 20px !important;
+                        border-radius: 50% !important;
+                        background-color: rgba($cr, 0.25) !important;
+                        color: rgba($cb, 0.5) !important;
+                        margin: 4px 8px !important;
+                        outline: none;
+                        @include transition($all);
+
+                        &:hover {
+                            background-color: rgba($cr, 0.85) !important;
+                            color: $cwhite !important;
+                        }
+                    }
+                }
+            }
+
+            .recentEvent {
+                &__sec {
+                    padding: 1rem;
+                    border: 1px solid #efefef;
+                    @include border-radius(2rem);
+                    @include transition($all);
+
+                    &:hover {
+                        border-color: $cr;
                     }
                 }
             }
@@ -436,6 +638,7 @@
 
         .sidebar {
             width: 70px;
+            box-shadow: 4px 0px 16px -14px rgb(0 0 0 / 80%);
         }
 
         .page-content-wrapper {
